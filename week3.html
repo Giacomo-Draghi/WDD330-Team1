@@ -105,8 +105,30 @@
         // Array.prototype.map()
         // 2. Give us an array of the inventors' first and last names
 
+        console.log("In the following we will create an array of the inventors' first and last names using .map() property");
+        const firstLast = inventors.map(x => x.first + " " + x.last);
+        console.log(firstLast);
+
         // Array.prototype.sort()
         // 3. Sort the inventors by birthdate, oldest to youngest
+
+        console.log("In the following we will sort the inventors by birthdate, oldest to youngest using .sort() property");
+
+        const oldToYoung = inventors.sort((x, y) => {
+            if (x.year < y.year) {
+                return -1;
+            }
+            else {
+                return 1;
+            };
+        });
+
+        const oldToYoung2 = inventors.sort((x, y) => x.year < y.year ? -1 : 1);
+
+        console.log(oldToYoung);
+        console.log(oldToYoung2);
+
+
 
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
@@ -137,6 +159,11 @@
 
         // 5. Sort the inventors by years lived
 
+        console.log("In the following we will sort the inventors by years lived using .sort() property");
+
+        const oldest = inventors.sort(function (a, b) {            const last = a.passed - a.year;            const next = b.passed - b.year;            return last > next ? -1 : 1;        });        console.log(oldest);
+
+
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
         // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
@@ -145,6 +172,11 @@
 
         // 7. sort Exercise
         // Sort the people alphabetically by last name
+
+        console.log("In the following we will sort the people by last name using .sort() property");
+
+        var lastSort = people.sort();
+        console.log(lastSort);
 
         // 8. Reduce Exercise
         // Sum up the instances of each of these
@@ -164,6 +196,10 @@
             'car',
             'truck'
         ];
+
+        console.log("In the following we will sum up the instances of each of these using .sort() property");
+        const singleInstance = data.reduce((obj, item) => {            if (!obj[item]) {                obj[item] = 0; //Add item key into obj and initialize to zero count;            }            obj[item]++;            return obj;        }, {});  //Pass empty object as second parameter        console.log(singleInstance);        console.table(singleInstance);        console.table(data);
+
     </script>
 </body>
 </html>
