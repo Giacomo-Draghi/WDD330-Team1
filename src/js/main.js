@@ -21,6 +21,12 @@ const ind = [{
         link: "week3.html",
         intro: "intro:",
         text: "Press F12 and read in the comments, you will find what it was required and in the consolle it will be displaied the results."
+    },
+    {
+        title: "Week 4",
+        link: "week4.html",
+        intro: "intro:",
+        text: "Play Tick tack toe with us."
     }
 ];
 
