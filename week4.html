@@ -101,32 +101,40 @@
     <div class="container2">
         <button onclick="reset()">Play Again</button>
     </div>
+    <footer class="col-3 footerBar">
+        <div></div>
+        <div class="footer">
+            <p>Website Made by: <a href="https://github.com/Giacomo-Draghi/WDD330-Team1" target="_blank">Team 1</a><a href="index.html">Home</a></p>
+
+        </div>
+        <div></div>
+    </footer>
     <script>
 
-    let nextMove='X';
-    function myFunction(event) {
-    event.target.innerHTML=nextMove;
-      if (nextMove==='X'){
-          nextMove='O';
-        }else{nextMove='X'}
-        if(('.game div:nth-child(1).innerHTML'==='X') && ('.game div:nth-child(2).innerHTML'==='X') &&
-        ('.game div:nth-child(3).innerHTML'==='X')){
-          console.log("X Wins");
+        let nextMove = 'X';
+        function myFunction(event) {
+            event.target.innerHTML = nextMove;
+            if (nextMove === 'X') {
+                nextMove = 'O';
+            } else { nextMove = 'X' }
+            if (('.game div:nth-child(1).innerHTML' === 'X') && ('.game div:nth-child(2).innerHTML' === 'X') &&
+                ('.game div:nth-child(3).innerHTML' === 'X')) {
+                console.log("X Wins");
+            }
         }
-      }
 
 
 
 
 
-    function reset(){
-      const theSections=document.getElementById('game').children;
-      console.log(theSections);
-      let i=0;
-      for(i; i < theSections.length; i++) {
-        theSections[i].innerHTML="";
-      }
-    }
+        function reset() {
+            const theSections = document.getElementById('game').children;
+            console.log(theSections);
+            let i = 0;
+            for (i; i < theSections.length; i++) {
+                theSections[i].innerHTML = "";
+            }
+        }
 
     </script>
 </body>
