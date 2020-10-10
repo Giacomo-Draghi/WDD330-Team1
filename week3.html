@@ -161,7 +161,13 @@
 
         console.log("In the following we will sort the inventors by years lived using .sort() property");
 
-        const oldest = inventors.sort(function (a, b) {            const last = a.passed - a.year;            const next = b.passed - b.year;            return last > next ? -1 : 1;        });        console.log(oldest);
+        const oldest = inventors.sort(function (a, b) {
+            const last = a.passed - a.year;
+            const next = b.passed - b.year;
+            return last > next ? -1 : 1;
+        });
+
+        console.log(oldest);
 
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -198,7 +204,18 @@
         ];
 
         console.log("In the following we will sum up the instances of each of these using .sort() property");
-        const singleInstance = data.reduce((obj, item) => {            if (!obj[item]) {                obj[item] = 0; //Add item key into obj and initialize to zero count;            }            obj[item]++;            return obj;        }, {});  //Pass empty object as second parameter        console.log(singleInstance);        console.table(singleInstance);        console.table(data);
+        const singleInstance = data.reduce((obj, item) => {
+            if (!obj[item]) {
+                obj[item] = 0; //Add item key into obj and initialize to zero count;
+            }
+            obj[item]++;
+            return obj;
+        }, {});  //Pass empty object as second parameter
+
+        console.log(singleInstance);
+        console.table(singleInstance);
+        console.table(data);
+
 
     </script>
 </body>
